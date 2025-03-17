@@ -32,9 +32,11 @@ To run this project locally, follow these steps:
 
 1. **Clone the Repository**:
 
-   git clone 
+   git clone : https://github.com/Tanxeem/Web-Dev-Cohort/tree/0924ac88f5fca9d9a280e385c180173e3ab3aa0c/02%20Mood%20Tracker
 
 
 ## Varcel Link
+
+https://mood-tracker-fawn-five.vercel.app/
 
 
