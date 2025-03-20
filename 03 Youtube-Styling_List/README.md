@@ -26,7 +26,7 @@ This project uses the [FreeAPI](https://api.freeapi.app/) to fetch YouTube video
 youtubestyle.jpg
 
 ## Git
-Git Repository : 
+Git Repository : https://github.com/Tanxeem/Web-Dev-Cohort/tree/3de306f1443d9c8214104cfe763cda205db0e2e2/03%20Youtube-Styling_List
 
 ## Vercel
-Vercel URL : 
+Vercel URL : https://youtubesvideoslist.vercel.app/
