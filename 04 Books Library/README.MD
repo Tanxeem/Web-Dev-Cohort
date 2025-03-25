@@ -27,12 +27,12 @@ A web-based Book Library application that allows users to browse a collection of
 ## Deployment Link
 
 You can access the deployed Book Library Application here:  
-[**Book Library App**](https://your-deployment-link-here.com)
+[**Book Library App**](https://books-library-webdev-cohort.vercel.app/)
 
 
 1. **Clone the Repository**:
 
-    git clone https://github.com/your-username/book-library-app.git
+    git clone (https://github.com/Tanxeem/Web-Dev-Cohort/tree/main/04%20Books%20Library)
 
 ## Technology Stack
 
