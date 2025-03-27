@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Previewer Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=55494&format=png&color=000000" type="image/x-icon">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1><i class="fab fa-markdown"></i> Markdown Previewer Pro</h1>
+                <div class="theme-toggle">
+                    <button id="themeBtn"><i class="fas fa-moon"></i> Dark Mode</button>
+                </div>
+            </div>
+            
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="editor"><i class="fas fa-edit"></i> Editor</button>
+                    <button class="tab-btn" data-tab="preview"><i class="fas fa-eye"></i> Preview</button>
+                    <button class="tab-btn" data-tab="both"><i class="fas fa-columns"></i> Both</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="editor-container active" data-content="editor">
+                <div class="toolbar">
+                    <div class="toolbar-group">
+                        <button title="Heading 1" onclick="insertText('# ')" class="tool-btn"><i class="fas fa-heading"></i> H1</button>
+                        <button title="Heading 2" onclick="insertText('## ')" class="tool-btn"><i class="fas fa-heading"></i> H2</button>
+                        <button title="Heading 3" onclick="insertText('### ')" class="tool-btn"><i class="fas fa-heading"></i> H3</button>
+                    </div>
+                    <div class="toolbar-group">
+                        <button title="Bold" onclick="insertText('**bold**')" class="tool-btn"><i class="fas fa-bold"></i></button>
+                        <button title="Italic" onclick="insertText('*italic*')" class="tool-btn"><i class="fas fa-italic"></i></button>
+                        <button title="Strikethrough" onclick="insertText('~~strikethrough~~')" class="tool-btn"><i class="fas fa-strikethrough"></i></button>
+                    </div>
+                    <div class="toolbar-group">
+                        <button title="Link" onclick="insertText('[text](url)')" class="tool-btn"><i class="fas fa-link"></i></button>
+                        <button title="Image" onclick="insertText('![alt](image-url)')" class="tool-btn"><i class="fas fa-image"></i></button>
+                        <button title="Code" onclick="insertText('```\ncode\n```')" class="tool-btn"><i class="fas fa-code"></i></button>
+                    </div>
+                    <div class="toolbar-group">
+                        <button title="List" onclick="insertText('- ')" class="tool-btn"><i class="fas fa-list-ul"></i></button>
+                        <button title="Numbered List" onclick="insertText('1. ')" class="tool-btn"><i class="fas fa-list-ol"></i></button>
+                        <button title="Blockquote" onclick="insertText('> ')" class="tool-btn"><i class="fas fa-quote-right"></i></button>
+                    </div>
+                </div>
+                <textarea id="input" placeholder="Type your Markdown here..." oninput="updatePreview()" onkeydown="handleKeyDown(event)"></textarea>
+                <div class="editor-footer">
+                    <button id="copyBtn" class="action-btn"><i class="far fa-copy"></i> Copy</button>
+                    <button id="clearBtn" class="action-btn"><i class="fas fa-trash-alt"></i> Clear</button>
+                    <button id="downloadBtn" class="action-btn"><i class="fas fa-download"></i> Download</button>
+                    <span id="charCount">0 characters</span>
+                </div>
+            </div>
+
+            <div class="preview-container" data-content="preview">
+                <div id="preview"></div>
+            </div>
+
+            <div class="split-view-container" data-content="both">
+                <div class="split-editor">
+                    <textarea id="split-input" placeholder="Type your Markdown here..." oninput="updateSplitPreview()" onkeydown="handleKeyDown(event)"></textarea>
+                </div>
+                <div class="split-preview">
+                    <div id="split-preview"></div>
+                </div>
+            </div>
+        </main>
+
+        <div id="snackbar">Copied to clipboard!</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
