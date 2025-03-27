@@ -26,8 +26,9 @@ A feature-rich Markdown editor with live preview, syntax highlighting, and multi
 ## Installation
 
 1. Clone the repository:
-   git clone https://github.com/yourusername/markdown-previewer.git
+   git clone https://github.com/Tanxeem/Web-Dev-Cohort/tree/main/05%20Markdown%20Previewer
 
    ## vercel
+link - https://markdown-previewer-pro.vercel.app/
 
 ![Screenshot](markdown-previewer-pro1.png)(markdown-previewer-pro-preview.png)(markdown-previewer-pro-light-mode.png)(markdown-previewer-pro-both.png) 
